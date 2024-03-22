@@ -1,0 +1,26 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "autoDocstring.docstringFormat": "numpy",
+    "autoDocstring.startOnNewLine": true,
+    "git.useEditorAsCommitInput": false,
+    "powermode.combo.location": "off",
+    "powermode.enabled": true,
+    "powermode.shake.enabled": false,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        79
+    ],
+    "notebook.output.scrolling": true,
+    "window.zoomLevel": 1,
+    "jupyter.askForKernelRestart": false,
+    "explorer.confirmDelete": false,
+    "remote.autoForwardPortsSource": "hybrid",
+    "explorer.confirmDragAndDrop": false,
+    "git.openRepositoryInParentFolders": "never",
+    "files.insertFinalNewline": true,
+    "notebook.insertFinalNewline": true,
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "Tomorrow Night Blue",
+    "workbench.colorTheme": "Default Light Modern",
+    "workbench.editor.enablePreview": false,
+}
