@@ -1,0 +1,33 @@
+services:
+  gpu:
+    container_name: sandbox.gpu
+    build:
+      context: .
+      dockerfile: docker/gpu/Dockerfile
+    shm_size: '28gb'
+    volumes:
+      - type: bind
+        source: $PWD
+        target: /workspace
+    working_dir: /workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [ gpu ]
+    tty: true
+
+  cpu:
+    container_name: sandbox.cpu
+    build:
+      context: .
+      dockerfile: docker/cpu/Dockerfile
+    image: sandbox_cpu_image
+    shm_size: '16gb'
+    volumes:
+      - type: bind
+        source: $PWD
+        target: /workspace
+    working_dir: /workspace
+    tty: true
