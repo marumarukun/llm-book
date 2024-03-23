@@ -16,5 +16,5 @@ RUN pip install poetry \
 #     ln -s /opt/poetry/bin/poetry && \
 #     poetry config virtualenvs.create false
 
-COPY ./test/pyproject.toml ./test/poetry.lock* ./
+COPY ./pyproject.toml ./poetry.lock* ./
 RUN poetry install
