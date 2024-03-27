@@ -4,6 +4,10 @@ FROM python:3.11.8-bullseye
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get clean
+
 ENV PYTHONPATH "${PYTHONPATH}:/workspace"
 WORKDIR /workspace
 
