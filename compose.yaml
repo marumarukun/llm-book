@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: docker/gpu/Dockerfile
+    image: sandbox_gpu_image
     shm_size: '28gb'
     volumes:
       - type: bind

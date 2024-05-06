@@ -6,8 +6,9 @@ authors = ["marumarukun"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
-jupyter = "^1.0.0"
+python = "^3.10"
+ipykernel = "^6.29.4"
+numpy = "^1.26.4"
 
 
 [build-system]

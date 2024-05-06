@@ -1,10 +1,13 @@
-# sandbox的に使うので軽量イメージを使う
-FROM python:3.10.12-bullseye
+# sandbox的に使うのでruntimeイメージを使う
+FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
 
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update && \
+    apt-get install -y curl python3-dev git && \
     apt-get upgrade -y && \
     apt-get clean
 
