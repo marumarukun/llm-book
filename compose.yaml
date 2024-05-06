@@ -1,10 +1,10 @@
 services:
   gpu:
-    container_name: sandbox.gpu
+    container_name: llm-book-container
     build:
       context: .
       dockerfile: docker/gpu/Dockerfile
-    image: sandbox_gpu_image
+    image: llm-book-image
     shm_size: '28gb'
     volumes:
       - type: bind
@@ -17,18 +17,4 @@ services:
           devices:
             - driver: nvidia
               capabilities: [ gpu ]
-    tty: true
-
-  cpu:
-    container_name: sandbox.cpu
-    build:
-      context: .
-      dockerfile: docker/cpu/Dockerfile
-    image: sandbox_cpu_image
-    shm_size: '16gb'
-    volumes:
-      - type: bind
-        source: $PWD
-        target: /workspace
-    working_dir: /workspace
     tty: true

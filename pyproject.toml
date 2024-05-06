@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.10"
 ipykernel = "^6.29.4"
 numpy = "^1.26.4"
+transformers = {extras = ["ja", "sentencepiece", "torch"], version = "^4.40.1"}
 
 
 [build-system]
